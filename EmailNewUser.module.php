@@ -123,7 +123,7 @@ class EmailNewUser extends WireData implements Module, ConfigurableModule {
         $f->attr('name', 'sendEmail');
         $f->notes = $notes;
         $f->label = $sendLabel;
-        //$f->showIf = "email!='', roles.count>1";
+        $f->showIf = "email!='', roles.count>1";
         $f->attr('checked', $checked);
         $f->collapsed = Inputfield::collapsedBlank;
         $form->append($f);
